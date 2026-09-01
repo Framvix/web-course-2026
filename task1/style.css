@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Шапка */
+
+header {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    padding: 40px;
+    background-color: white;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.header-info h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #555;
+}
+
+.header-info p {
+    margin: 0;
+    color: #777;
+}
+
+/* Аватар */
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Навигация */
+
+nav {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    padding: 20px;
+    background-color: #222;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #5ba8ff;
+    text-decoration: underline;
+}
+
+/* Основная часть */
+
+main {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 30px 40px;
+    background-color: white;
+}
+
+section h2 {
+    margin: 0;
+}
+
+/* Образование */
+
+#education ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding-left: 20px;
+}
+
+/* Навыки */
+
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list span {
+    padding: 8px 16px;
+    background-color: #e5e5e5;
+    border-radius: 20px;
+}
+
+/* Контакты */
+
+address {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    font-style: normal;
+}
+
+address a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+address a:hover {
+    color: #003d80;
+    text-decoration: underline;
+}
+
+/* Подвал */
+
+footer {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    address {
+        flex-direction: column;
+    }
+}
