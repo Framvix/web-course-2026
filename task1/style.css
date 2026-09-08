@@ -1,19 +1,24 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f8f9fc;
+    color: #1e1e2a;
+    line-height: 1.6;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Шапка */
+/* ===== HEADER ===== */
 
 header {
     width: 100%;
@@ -25,7 +30,10 @@ header {
     gap: 40px;
 
     padding: 40px;
-    background-color: white;
+    background: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    margin-bottom: 2rem;
 }
 
 .header-info {
@@ -45,17 +53,15 @@ header {
     color: #555;
 }
 
-.header-info p {
+.header-info .tagline {
     margin: 0;
-    color: #777;
-}
-
-/* Аватар */
-
-.avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #eef2ff;
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    color: #2a2a4a;
+    font-weight: 500;
 }
 
 .avatar img {
@@ -63,9 +69,10 @@ header {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #d0d9f0;
 }
 
-/* Навигация */
+/* ===== NAV ===== */
 
 nav {
     width: 100%;
@@ -78,7 +85,9 @@ nav {
     gap: 30px;
 
     padding: 20px;
-    background-color: #222;
+    background: #222;
+    border-radius: 60px;
+    margin-bottom: 2.5rem;
 }
 
 nav a {
@@ -91,7 +100,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Основная часть */
+/* ===== MAIN ===== */
 
 main {
     width: 100%;
@@ -104,90 +113,154 @@ main {
     padding: 20px 0;
 }
 
+/* ===== SECTIONS ===== */
+
 section {
     display: flex;
     flex-direction: column;
     gap: 15px;
 
     padding: 30px 40px;
-    background-color: white;
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
 }
 
 section h2 {
     margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-left: 6px solid #1e1e2a;
+    padding-left: 1rem;
 }
 
-/* Образование */
+/* ===== EDUCATION ===== */
 
 #education ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
     padding-left: 20px;
 }
 
-/* Навыки */
+/* ===== SKILLS ===== */
 
 .skills-list {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .skills-list span {
     padding: 8px 16px;
-    background-color: #e5e5e5;
-    border-radius: 20px;
+    background: #f0f2f8;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1f1f32;
 }
 
-/* Контакты */
+/* ===== ABOUT ===== */
+
+.profile-description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.profile-description > div {
+    flex: 2;
+    min-width: 280px;
+}
+
+.profile-description p {
+    margin-bottom: 0.8rem;
+}
+
+.meta-list {
+    flex: 1;
+    min-width: 200px;
+    list-style: none;
+    background: #f8f9fe;
+    padding: 1.2rem 1.6rem;
+    border-radius: 1.5rem;
+}
+
+.meta-list li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+.meta-list li:last-child {
+    border-bottom: none;
+}
+
+/* ===== WORKS ===== */
+
+.works-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.work-card {
+    flex: 1 1 260px;
+    background: #fafbff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #eef0f7;
+}
+
+.video-thumb {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #1f1f2a;
+    overflow: hidden;
+}
+
+.video-thumb iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.card-body {
+    padding: 1.2rem 1.2rem 1.4rem;
+}
+
+.card-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.card-body p {
+    color: #5a5a72;
+    font-size: 0.9rem;
+}
+
+/* ===== CONTACTS ===== */
 
 address {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-
     font-style: normal;
 }
 
 address a {
-    color: #0066cc;
+    color: #1e1e2a;
     text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
 }
 
 address a:hover {
-    color: #003d80;
-    text-decoration: underline;
-}
-
-/* Подвал */
-
-footer {
-    width: 100%;
-    max-width: 1000px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-    background-color: #222;
-    color: white;
-}
-
-/* Адаптация под телефон */
-
-@media (max-width: 650px) {
-
-    header {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    address {
-        flex-direction: column;
-    }
+    border-bottom-color: #1e1e2a;
 }
