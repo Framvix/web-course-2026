@@ -1,582 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
-  <title>Fried Fries Prod</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-        rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-  <script>
-    try {
-      if (sessionStorage.getItem("frpr-visited")) {
-        document.documentElement.classList.add("intro-seen");
-      }
-      sessionStorage.setItem("frpr-visited", "1");
-    } catch (_) {}
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FRAMVIX — Видеосъёмка и монтаж</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- SVG вместо символов, которые телефон может отображать как эмодзи -->
-  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg"
-       aria-hidden="true">
-    <symbol id="icon-arrow" viewBox="0 0 24 24">
-      <path d="M4 12h15M12 5l7 7-7 7"/>
-    </symbol>
-
-    <symbol id="icon-instagram" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="5"/>
-      <circle cx="12" cy="12" r="4"/>
-      <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>
-    </symbol>
-
-    <symbol id="icon-telegram" viewBox="0 0 24 24">
-      <path d="m3 10 18-7-4 18-6-6-4 3 1-6 9-6-11 5z"
-            stroke-linejoin="round"/>
-    </symbol>
-
-    <symbol id="icon-youtube" viewBox="0 0 24 24">
-      <rect x="2" y="5" width="20" height="14" rx="4"/>
-      <path d="m10 9 6 3-6 3z"/>
-    </symbol>
-  </svg>
-
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="intro" aria-hidden="true">
-    <span>FRPR</span>
-    <small>VIDEO PRODUCTION</small>
-  </div>
-
-  <header class="header wrap" id="top">
-    <a class="brand" href="#top" aria-label="Fried Fries Prod home">
-      <img src="img/frpr-logo.png" alt="FRPR logo" width="76" height="76">
-      <span>FRIED FRIES<br>PROD</span>
-    </a>
-
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="header-contact" href="#contact">
-      Contact
-      <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg>
-    </a>
-
-    <!-- Открывается без JavaScript -->
-    <details class="mobile-menu">
-      <summary aria-label="Open navigation">
-        <span></span>
-        <span></span>
-      </summary>
-
-      <div class="mobile-panel">
-        <nav aria-label="Mobile navigation">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+    <header class="header container">
+        <a class="logo" href="#home">FRAMVIX</a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="#home">Главная</a>
+            <a href="#projects">Работы</a>
+            <a href="#services">Услуги</a>
+            <a href="#contact">Контакты</a>
         </nav>
-
-        <!-- Замени адреса на ссылки своих аккаунтов -->
-        <div class="social-links">
-          <a href="https://www.instagram.com/"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Instagram">
-            <svg class="icon" aria-hidden="true">
-              <use href="#icon-instagram"/>
-            </svg>
-          </a>
-
-          <a href="https://telegram.org/"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Telegram">
-            <svg class="icon" aria-hidden="true">
-              <use href="#icon-telegram"/>
-            </svg>
-          </a>
-
-          <a href="https://www.youtube.com/"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="YouTube">
-            <svg class="icon" aria-hidden="true">
-              <use href="#icon-youtube"/>
-            </svg>
-          </a>
+        <!-- Только изображение меню: раскрытие по заданию не требуется. -->
+        <div class="hamburger" role="img" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-      </div>
-    </details>
-  </header>
-
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <h1 id="hero-title">
-        <span>FRIED FRIES</span>
-        <span class="title-second">PRODUCTION</span>
-      </h1>
-    </section>
-
-    <div class="section-strip" aria-hidden="true">
-      <span>MUSIC VIDEOS</span><i></i>
-      <span>COMMERCIALS</span><i></i>
-      <span>ARTIST VISUALS</span><i></i>
-      <span>FRIED FRIES PROD</span>
-    </div>
-
-    <section class="work section" id="work" aria-labelledby="work-title">
-      <div class="section-heading wrap">
-        <h2 id="work-title">SELECTED WORK</h2>
-
-        <div class="gallery-controls">
-          <span class="counter" aria-live="polite">01 / 08</span>
-
-          <button class="round-button previous" type="button"
-                  aria-label="Previous project" aria-controls="gallery">
-            <svg class="icon arrow-up" aria-hidden="true">
-              <use href="#icon-arrow"/>
-            </svg>
-          </button>
-
-          <button class="round-button next" type="button"
-                  aria-label="Next project" aria-controls="gallery">
-            <svg class="icon arrow-down" aria-hidden="true">
-              <use href="#icon-arrow"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Для каждой работы:
-           data-video="img/project-01.mp4"
-           data-cover="img/project-01.jpg"
-           Пустые значения сохраняют демонстрационную обложку -->
-
-      <div class="gallery" id="gallery" tabindex="0"
-           role="region" aria-label="Vertical project gallery">
-
-        <article class="project is-current" id="project-1">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview After hours" aria-pressed="false">
-            <span class="concept-cover frame-1" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>After hours</h3><span>Music video</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-2">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview Night drive" aria-pressed="false">
-            <span class="concept-cover frame-2" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>Night drive</h3><span>Commercial</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-3">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview Closer" aria-pressed="false">
-            <span class="concept-cover frame-3" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>Closer</h3><span>Artist film</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-4">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview In motion" aria-pressed="false">
-            <span class="concept-cover frame-4" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>In motion</h3><span>Performance</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-5">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview No limits" aria-pressed="false">
-            <span class="concept-cover frame-5" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>No limits</h3><span>Brand film</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-6">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview Reflections" aria-pressed="false">
-            <span class="concept-cover frame-6" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>Reflections</h3><span>Music video</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-7">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview Behind the lens" aria-pressed="false">
-            <span class="concept-cover frame-7" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>Behind the lens</h3><span>Behind the scenes</span>
-          </div>
-        </article>
-
-        <article class="project" id="project-8">
-          <button class="project-preview" type="button"
-                  data-video="" data-cover=""
-                  aria-label="Preview One take" aria-pressed="false">
-            <span class="concept-cover frame-8" aria-hidden="true"></span>
-            <video muted loop playsinline preload="none"
-                   aria-hidden="true"></video>
-          </button>
-          <div class="project-caption">
-            <h3>One take</h3><span>Live session</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="reel-meta wrap">
-        <span class="current-title">After hours</span>
-        <span class="current-category">Music video</span>
-      </div>
-
-      <p class="gallery-status wrap" role="status"></p>
-    </section>
-
-    <div class="section-strip" aria-hidden="true">
-      <span>MUSIC VIDEOS</span><i></i>
-      <span>COMMERCIALS</span><i></i>
-      <span>ARTIST VISUALS</span><i></i>
-      <span>FRIED FRIES PROD</span>
-    </div>
-
-    <section class="services section wrap" id="services"
-             aria-labelledby="services-title">
-      <div class="section-heading">
-        <h2 id="services-title">SERVICES</h2>
-      </div>
-
-      <div class="services-grid">
-        <article class="service">
-          <span>01</span>
-          <h3>Music videos</h3>
-          <p>Direction / Filming / Editing</p>
-        </article>
-
-        <article class="service">
-          <span>02</span>
-          <h3>Commercials</h3>
-          <p>Campaigns / Brand films / Social content</p>
-        </article>
-
-        <article class="service">
-          <span>03</span>
-          <h3>Artist visuals</h3>
-          <p>Live sessions / Performance / Release teasers</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="section-strip" aria-hidden="true">
-      <span>MUSIC VIDEOS</span><i></i>
-      <span>COMMERCIALS</span><i></i>
-      <span>ARTIST VISUALS</span><i></i>
-      <span>FRIED FRIES PROD</span>
-    </div>
-
-    <section class="contact section" id="contact"
-             aria-labelledby="contact-title">
-      <div class="contact-grid wrap">
-        <div class="contact-copy">
-          <h2 id="contact-title">CONTACT</h2>
-        </div>
-
-        <!-- Только оформление: нет action и обработчика отправки -->
-        <form class="contact-form" aria-describedby="form-note">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text"
-                   autocomplete="name" placeholder="Your name" required>
-          </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email"
-                   autocomplete="email" placeholder="Your email" required>
-          </div>
-
-          <div class="field field-wide">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"
-                      placeholder="Project details" required></textarea>
-          </div>
-
-          <button class="send-button field-wide" type="button">
-            Send message
-            <svg class="icon" aria-hidden="true">
-              <use href="#icon-arrow"/>
-            </svg>
-          </button>
-
-          <p class="form-note field-wide" id="form-note">
-            Demo form — messages are not sent
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <div class="section-strip" aria-hidden="true">
-      <span>MUSIC VIDEOS</span><i></i>
-      <span>COMMERCIALS</span><i></i>
-      <span>ARTIST VISUALS</span><i></i>
-      <span>FRIED FRIES PROD</span>
-    </div>
-  </main>
-
-  <footer class="footer wrap">
-    <span class="footer-brand">FRIED FRIES PROD</span>
-    <span>© 2026</span>
-    <a href="#top">
-      Back to top
-      <svg class="icon arrow-up" aria-hidden="true">
-        <use href="#icon-arrow"/>
-      </svg>
-    </a>
-  </footer>
-
-  <script>
-    (() => {
-      const gallery = document.querySelector(".gallery");
-      const cards = [...gallery.querySelectorAll(".project")];
-      const previous = document.querySelector(".previous");
-      const next = document.querySelector(".next");
-      const counter = document.querySelector(".counter");
-      const title = document.querySelector(".current-title");
-      const category = document.querySelector(".current-category");
-      const status = document.querySelector(".gallery-status");
-      const menu = document.querySelector(".mobile-menu");
-      const reduced = matchMedia("(prefers-reduced-motion: reduce)");
-      const desktopPointer = matchMedia("(hover: hover) and (pointer: fine)");
-
-      let current = -1;
-      let playing = null;
-      let frame = 0;
-
-      function stop(button) {
-        button.dataset.requested = "false";
-        button.querySelector("video").pause();
-        button.classList.remove("is-playing");
-        button.setAttribute("aria-pressed", "false");
-        if (playing === button) playing = null;
-      }
-
-      async function play(button) {
-        const source = button.dataset.video.trim();
-        if (!source) return;
-
-        if (playing && playing !== button) stop(playing);
-
-        const video = button.querySelector("video");
-        playing = button;
-        button.dataset.requested = "true";
-
-        if (!video.getAttribute("src")) video.src = source;
-
-        try {
-          await video.play();
-
-          if (button.dataset.requested !== "true") {
-            video.pause();
-            return;
-          }
-
-          button.classList.add("is-playing");
-          button.setAttribute("aria-pressed", "true");
-          status.textContent = "";
-        } catch (_) {
-          if (button.dataset.requested === "true") {
-            stop(button);
-            status.textContent = "Preview unavailable";
-          }
-        }
-      }
-
-      function centre(index) {
-        index = Math.max(0, Math.min(cards.length - 1, index));
-
-        const viewport = gallery.getBoundingClientRect();
-        const card = cards[index].getBoundingClientRect();
-
-        gallery.scrollBy({
-          top: card.top + card.height / 2
-             - viewport.top - gallery.clientHeight / 2,
-          behavior: reduced.matches ? "instant" : "smooth"
-        });
-      }
-
-      function update() {
-        frame = 0;
-
-        const viewport = gallery.getBoundingClientRect();
-        const middle = viewport.top + gallery.clientHeight / 2;
-        let nearest = 0;
-        let bestDistance = Infinity;
-
-        cards.forEach((card, index) => {
-          const rect = card.getBoundingClientRect();
-          const distance = Math.abs(rect.top + rect.height / 2 - middle);
-
-          if (distance < bestDistance) {
-            bestDistance = distance;
-            nearest = index;
-          }
-        });
-
-        if (nearest !== current) {
-          current = nearest;
-
-          cards.forEach((card, index) => {
-            card.classList.toggle("is-current", index === current);
-
-            const button = card.querySelector(".project-preview");
-            if (index !== current && button === playing) stop(button);
-          });
-
-          title.textContent = cards[current].querySelector("h3").textContent;
-          category.textContent =
-            cards[current].querySelector(".project-caption span").textContent;
-
-          counter.textContent =
-            String(current + 1).padStart(2, "0") + " / " +
-            String(cards.length).padStart(2, "0");
-        }
-
-        previous.disabled = current === 0;
-        next.disabled = current === cards.length - 1;
-      }
-
-      function scheduleUpdate() {
-        if (!frame) frame = requestAnimationFrame(update);
-      }
-
-      cards.forEach((card, index) => {
-        const button = card.querySelector(".project-preview");
-        const video = button.querySelector("video");
-        const cover = card.querySelector(".concept-cover");
-
-        if (button.dataset.cover.trim()) {
-          const image = document.createElement("img");
-          image.className = "custom-cover";
-          image.alt = "";
-          image.loading = "lazy";
-
-          image.addEventListener("load", () => cover.hidden = true);
-          image.addEventListener("error", () => image.remove());
-
-          image.src = button.dataset.cover;
-          button.prepend(image);
-        }
-
-        button.addEventListener("pointerenter", () => {
-          if (desktopPointer.matches && !reduced.matches) play(button);
-        });
-
-        button.addEventListener("pointerleave", () => {
-          if (desktopPointer.matches) stop(button);
-        });
-
-        button.addEventListener("blur", () => stop(button));
-
-        button.addEventListener("click", () => {
-          centre(index);
-
-          if (!button.dataset.video.trim()) {
-            status.textContent = "Preview coming soon";
-            return;
-          }
-
-          if (button.dataset.requested === "true") stop(button);
-          else play(button);
-        });
-
-        video.addEventListener("error", () => {
-          stop(button);
-          status.textContent = "Preview unavailable";
-        });
-      });
-
-      previous.addEventListener("click", () => centre(current - 1));
-      next.addEventListener("click", () => centre(current + 1));
-
-      gallery.addEventListener("scroll", scheduleUpdate, { passive: true });
-
-      gallery.addEventListener("keydown", event => {
-        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-          event.preventDefault();
-          centre(current + (event.key === "ArrowDown" ? 1 : -1));
-        }
-      });
-
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden && playing) stop(playing);
-      });
-
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(entries => {
-          if (!entries[0].isIntersecting && playing) stop(playing);
-        });
-        observer.observe(gallery);
-      }
-
-      menu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => menu.open = false);
-      });
-
-      document.addEventListener("keydown", event => {
-        if (event.key === "Escape" && menu.open) {
-          menu.open = false;
-          menu.querySelector("summary").focus();
-        }
-      });
-
-      document.addEventListener("click", event => {
-        if (menu.open && !menu.contains(event.target)) menu.open = false;
-      });
-
-      window.addEventListener("resize", scheduleUpdate);
-      update();
-    })();
-  </script>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <h1 id="hero-title">Видеосъёмка и монтаж</h1>
+            <p>Снимаю и монтирую музыкальные клипы, рекламу и другие видеопроекты</p>
+            <a class="button" href="#projects">Мои работы</a>
+        </section>
+
+        <section class="projects" id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Мои работы</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Музыкальные клипы</h3>
+                    <p>Съёмка и монтаж клипов, которые передают настроение музыки и образ исполнителя.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Рекламные ролики</h3>
+                    <p>Короткие видео о продуктах и услугах для рекламы и социальных сетей.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Видеоконтент</h3>
+                    <p>Репортажи с мероприятий и видеоматериалы для личных и творческих проектов.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="services" id="services" aria-labelledby="services-title">
+            <h2 id="services-title">Услуги</h2>
+            <div class="services-grid">
+                <div>
+                    <h3>Видеосъёмка</h3>
+                    <p>Подбор ракурсов, работа со светом и съёмка материала.</p>
+                </div>
+                <div>
+                    <h3>Видеомонтаж</h3>
+                    <p>Сборка истории, работа с ритмом и звуком.</p>
+                </div>
+                <div>
+                    <h3>Цветокоррекция</h3>
+                    <p>Выравнивание цвета и создание общего настроения видео.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Контакты</h2>
+            <p id="form-note">Учебная форма: данные не отправляются.</p>
+            <form class="contact-form" aria-describedby="form-note">
+                <div class="field">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" autocomplete="name">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email">
+                </div>
+                <div class="field field-wide">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+                <button class="button" type="button">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p>© 2026 FRAMVIX</p>
+        <p>Видеосъёмка и монтаж</p>
+    </footer>
 </body>
 </html>
